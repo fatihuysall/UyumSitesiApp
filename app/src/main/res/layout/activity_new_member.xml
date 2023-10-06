@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewMemberActivity">
+
+
+    <TextView
+        android:id="@+id/NewMemberTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtYeniUye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YENİ ÜYE"
+        android:textColor="@color/black2"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/NewMemberTitle"
+        app:layout_constraintLeft_toRightOf="@id/txtNewMemberType"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtNewMemberType"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/roundedbutton"
+        android:paddingLeft="10dp"
+        android:text="Üyelik"
+        android:textColor="@color/black2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/NewMemberTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnSave"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewNewMemberAllow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/downicon"
+        app:layout_constraintBottom_toBottomOf="@id/txtNewMemberType"
+        app:layout_constraintRight_toRightOf="@id/txtNewMemberType"
+        app:layout_constraintTop_toTopOf="@id/txtNewMemberType" />
+
+    <EditText
+        android:id="@+id/edittxtNewName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbackground"
+        android:hint="İsim Soyisim"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black2"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewMemberTitle" />
+
+    <EditText
+        android:id="@+id/edittxtNewPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbackground"
+        android:hint="Telefon Numarası"
+        android:inputType="phone"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black2"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtNewName" />
+
+    <EditText
+        android:id="@+id/edittxtNewAdress"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbackground"
+        android:gravity="start"
+        android:hint="Adres bilgisi"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtNewPhone" />
+
+    <EditText
+        android:id="@+id/edittxtNewPlateNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbackground"
+        android:hint="Plaka Numarası"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edittxtNewAdress" />
+
+    <EditText
+        android:id="@+id/edittxtMemberNote"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textbackground"
+        android:gravity="top"
+        android:hint="kullanıcı notu"
+        android:maxLines="3"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittxtNewPlateNumber" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/button"
+        android:text="Kaydet"
+        android:textColor="@color/black2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"/>
+
+    <EditText
+        android:id="@+id/edittxtBlockNumber"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textbackground"
+        android:gravity="center"
+        android:hint="Blok Numarası"
+        android:textColor="@color/black2"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/btnSave"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtswitchBackground" />
+
+
+    <TextView
+        android:id="@+id/txtswitchBackground"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/edittxtMemberNote" />
+
+    <TextView
+        android:id="@+id/txtElden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elden"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/switchPaymentMethod"
+        app:layout_constraintLeft_toLeftOf="@id/txtswitchBackground"
+        app:layout_constraintRight_toLeftOf="@id/switchPaymentMethod"
+        app:layout_constraintTop_toTopOf="@id/switchPaymentMethod" />
+
+    <Switch
+        android:id="@+id/switchPaymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:checked="false"
+        android:layout_marginRight="30dp"
+        app:layout_constraintLeft_toLeftOf="@id/txtswitchBackground"
+        app:layout_constraintRight_toRightOf="@id/txtswitchBackground"
+        app:layout_constraintTop_toTopOf="@id/txtswitchBackground"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/txtBankadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bankadan"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/switchPaymentMethod"
+        app:layout_constraintLeft_toRightOf="@id/switchPaymentMethod"
+        app:layout_constraintRight_toRightOf="@id/txtswitchBackground"
+        app:layout_constraintTop_toTopOf="@id/switchPaymentMethod" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="İş Bankası"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/checkBox2"
+        app:layout_constraintLeft_toLeftOf="@id/txtswitchBackground"
+        app:layout_constraintTop_toBottomOf="@id/switchPaymentMethod" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ziraat Bankası"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/txtswitchBackground"
+        app:layout_constraintLeft_toLeftOf="@id/txtswitchBackground"
+        app:layout_constraintTop_toBottomOf="@id/checkBox1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
